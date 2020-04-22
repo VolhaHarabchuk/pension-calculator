@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>
+            Check how much additional pension you could get
+        </h1>
+        <p>
+            Use this service to find out how much money you could get on retirement.
+        </p>
+        <br>
+        <p>
+            The basic advice with pensions is to put in is as much as possible, as early as possible.
+        </p>
+        <h3>
+            Let's calculate how money grow over time:
+        </h3>
+
+        <div class="form-group">
+            <label for="initialAmount">Initial Amount:</label>
+            <input type="text" class="form-control" id="intitalAmount" value="5000">USD
+        </div>
+        <div class="form-group">
+            <label for="monthAmount">Amount saved per month:</label>
+            <input type="text" class="form-control" id="monthAmount" value="100">USD
+        </div>
+        <div class="form-group">
+            Interesst rate (default 6.5%):
+            <input id="interresstRate" type="text" class="form-control" value="7.5">%
+        </div>
+        <div class="form-group">
+            Percentage of inflation:
+            <input id="inflationRate" type="text" class="form-control" value="2.5">%
+        </div>
+        <div class="form-group">
+            Number of years to retirement:
+            <input id="yearsToPension" type="text" class="form-control" value="10"> years
+        </div>
+    
+        <div class="form-group">
+            <button id="calculatePension" onclick="calculatePension()" class="btn btn-primary">Calculate pension</button>  
+        </div>
+
+        <p>
+            <h3>
+                Future value for your pension:
+            </h3>
+            <div>
+                <span id="result"></span> USD
+            </div>
+        </p>
+        
+        <script src="pension.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
