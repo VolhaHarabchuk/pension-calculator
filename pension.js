@@ -10,9 +10,9 @@ function futureValue (principal, monthly, annualInterest, annualInflation, years
     const numberOfCompounds = compoundsPerYear * years; 
     const interestPerCompound = ((annualInterest - annualInflation) / 100.0) / compoundsPerYear;  
     const interestPerCompound100 = 1 + interestPerCompound;
-    const power = Math.pow(interestPerCompound100, numberOfCompounds);
-    const compoundPrincipal = principal * power;
-    const compoundContributions = monthly * ((power - 1) / interestPerCompound);
+    const totalInterest = Math.pow(interestPerCompound100, numberOfCompounds);
+    const compoundPrincipal = principal * totalInterest;
+    const compoundContributions = monthly * ((totalInterest - 1) / interestPerCompound);
     const result = compoundPrincipal + compoundContributions;
     return result;
 }
