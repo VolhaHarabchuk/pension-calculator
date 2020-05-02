@@ -16,30 +16,32 @@
         <h3>
             Let's calculate how money grow over time:
         </h3>
-
-        <div class="form-group">
-            <label for="initialAmount">Initial Amount:</label>
-            <input type="text" class="form-control" id="intitalAmount" value="5000">USD
-        </div>
-        <div class="form-group">
-            <label for="monthAmount">Amount saved per month:</label>
-            <input type="text" class="form-control" id="monthAmount" value="100">USD
-        </div>
-        <div class="form-group">
-            Interesst rate (default 6.5%):
-            <input id="interresstRate" type="text" class="form-control" value="7.5">%
-        </div>
-        <div class="form-group">
-            Percentage of inflation:
-            <input id="inflationRate" type="text" class="form-control" value="2.5">%
-        </div>
-        <div class="form-group">
-            Number of years to retirement:
-            <input id="yearsToPension" type="text" class="form-control" value="10"> years
-        </div>
-    
-        <div class="form-group">
-            <button id="calculatePension" onclick="calculatePension()" class="btn btn-primary">Calculate pension</button>  
+        
+        <div style="max-width: 300px">
+            <div class="form-group">
+                <label for="initialAmount">Initial amount (USD):</label>
+                <input type="text" class="form-control" id="intitalAmount" value="5000">
+            </div>
+            <div class="form-group">
+                <label for="monthAmount">Amount saved per month (USD):</label>
+                <input type="text" class="form-control" id="monthAmount" value="100">
+            </div>
+            <div class="form-group">
+                Interest rate (%):
+                <input id="interresstRate" type="text" class="form-control" value="7.5">
+            </div>
+            <div class="form-group">
+                Inflation rate (%):
+                <input id="inflationRate" type="text" class="form-control" value="2.5">
+            </div>
+            <div class="form-group">
+                Number of years to retirement:
+                <input id="yearsToPension" type="text" class="form-control" value="10"> years
+            </div>
+        
+            <div class="form-group">
+                <button id="calculatePension" onclick="calculatePension()" class="btn btn-primary">Calculate pension</button>  
+            </div>
         </div>
 
         <p>
@@ -47,7 +49,7 @@
                 Future value for your pension:
             </h3>
             <div>
-                <span id="result"></span> USD
+                <span id="result">?</span> USD
             </div>
         </p>
         
