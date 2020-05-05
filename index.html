@@ -8,54 +8,74 @@
     </head>
     <body>
         <div class="container">
-            <h1>
+            <h3>
                 Check how much additional pension you could get
-            </h1>
+            </h3>
             <p>
                 Use this service to find out how much money you could get on retirement.
             </p>
             <br>
             
-            <h3>
+            <h4>
                 Let's calculate how money grow over time:
-            </h3>
-            
-            <div style="max-width: 300px">
-                <div class="form-group">
-                    <label for="initialAmount">Initial amount (USD):</label>
-                    <input type="text" class="form-control" id="intitalAmount" value="5000">
+            </h4>
+            <br>
+            <div style="max-width: 400px">
+                <div style="padding: 10px; background-color: rgb(241, 249, 252); border-radius: 5px 5px 0 0;">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Initial amount (USD):</span>
+                        </div> 
+                            <input type="text" class="form-control text-right" id="intitalAmount" value="5000">
+                    </div>
+                
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Amount saved per month (USD):</span>
+                        </div>
+                            <input type="text" class="form-control text-right" id="monthAmount" value="100">
+                    </div> 
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Interest rate (%):</span>
+                        </div>
+                            <input id="interresstRate" type="text" class="form-control text-right" value="7.5">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Inflation rate (%):</span>
+                        </div>
+                            <input id="inflationRate" type="text" class="form-control text-right" value="2.5">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Number of years to retirement:</span>
+                        </div>
+                            <input id="yearsToPension" type="text" class="form-control text-right" value="25">
+                        
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthAmount">Amount saved per month (USD):</label>
-                    <input type="text" class="form-control" id="monthAmount" value="100">
-                </div>
-                <div class="form-group">
-                    <label for="interresstRate"></label>Interest rate (%):</label>
-                    <input id="interresstRate" type="text" class="form-control" value="7.5">
-                </div>
-                <div class="form-group">
-                    <label for="inflationRate"></label>Inflation rate (%):</label>
-                    <input id="inflationRate" type="text" class="form-control" value="2.5">
-                </div>
-                <div class="form-group">
-                    <label for="yearsToPension"></label>Number of years to retirement:</label>
-                    <input id="yearsToPension" type="text" class="form-control" value="10">
-                </div>
-            
-                <div class="form-group">
-                    <button id="calculatePension" onclick="calculatePension()" class="btn btn-primary">Calculate pension</button>  
+                    <button id="calculatePension" onclick="calculatePension()" class="btn btn-primary btn-block">Calculate pension</button>  
                     
                 </div>
-            </div>
+            
 
-            <div>
-                <h5>
-                    Future value for your pension: <span id="result">?</span> USD
-                </h5>
-                <p>
-                    The basic advice with pensions is to put in it as much as possible, as early as possible.
-                </p>
-            </div>
+                <div>
+                    <div class="input-group mb-3" style="max-width: 400px">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text">Future value for your pension (USD):</span>
+                        </div>
+                        <span id="result" class="form-control" aria-label="result" style="color: black; text-align: right;">?</span>
+                    </div>
+                
+                    
+                </div>
+            </div> 
+            <p>
+                The basic advice with pensions is to put in it as much as possible, as early as possible.
+            </p>
         </div>
         <script src="pension.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
